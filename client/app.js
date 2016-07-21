@@ -14,5 +14,14 @@ var myApp = angular.module('Myapp', ['ngRoute']);
 				controller: 'indexController',
 				templateUrl: "partials/index.html"
 			})
+			.when('/mongoose/edit/:id', {
+				controller: "editController", 
+				templateUrl: "partials/edit.html"
+			})
+			.when('/mongoose/:id', 
+			{
+				controller: 'showController', 
+				templateUrl: "partials/show.html"
+			})			
 	})
 }());
